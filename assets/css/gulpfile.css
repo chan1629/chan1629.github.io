@@ -1,0 +1,78 @@
+#banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/banner.jpg"); }
+  #banner p, #banner h1, #banner h2, #banner h3, #banner h4, #banner h5 {
+    text-transform: none; }
+  #banner p {
+    color: #eaeaea; }
+  #banner .actions {
+    font-size: 42px; }
+    #banner .actions .fa-facebook {
+      color: #2756ca; }
+    #banner .actions .fa-whatsapp {
+      color: #1a9f10; }
+    #banner .actions .fa-envelope {
+      color: brown; }
+
+.galleria {
+  width: 100vw;
+  height: 100vh; }
+
+#two img {
+  width: 33.3vw;
+  display: block;
+  float: left;
+  cursor: pointer; }
+  #two img:hover {
+    opacity: 0.5; }
+
+#two .clear-float {
+  clear: both; }
+
+.fixed.iframe {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 3vh 3vw;
+  background: rgba(0, 0, 0, 0.8); }
+  .fixed.iframe.hide {
+    display: none; }
+  .fixed.iframe img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%; }
+
+.fixed.menu.segments {
+  width: 5.8vw;
+  height: 40vh;
+  position: fixed;
+  left: 2vw;
+  top: 15vh;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  padding: 1vw;
+  line-height: 4; }
+  .fixed.menu.segments .segment {
+    cursor: pointer; }
+    .fixed.menu.segments .segment:first-child {
+      padding-top: 3.5vh; }
+    .fixed.menu.segments .segment:not(:last-child) {
+      border-bottom: 1px solid #999; }
+  .fixed.menu.segments.hide {
+    opacity: 0; }
+
+.fixed.menu.icon {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  left: 2vw;
+  top: 30vh;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.7;
+  font-size: 30px;
+  color: #AAA; }

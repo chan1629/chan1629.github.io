@@ -1,0 +1,14 @@
+{
+  "name": "bird_portfolio",
+  "version": "1.0.0",
+  "description": "Photograher portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Photo"
+  ],
+  "author": "Anthony Wong Wing Chai",
+  "license": "ISC"
+}
