@@ -123,16 +123,15 @@
 			if (!closing){
 
 				closing = true;
-				var closingCount = 0, closingLimit = 2;
+				var closingCount = 0, closingLimit = 1;
 
-				$(".icon.menu").show();
-				closingCounterHelper();
+				
 				$(".segments.menu").animate({
 					opacity: 0
 				}, closingCounterHelper);
 
 				function closingCounterHelper() {
-
+					$(".icon.menu").show();
 					console.log("closing:", closingCount);
 					closingCount ++;
 					if (closingCount >= closingLimit) {
