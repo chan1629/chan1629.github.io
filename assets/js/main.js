@@ -101,7 +101,8 @@
 				$(".segments.menu").animate({
 					opacity: 1
 				}, openingCounterHelper);
-				$(".icon.menu").fadeOut(openingCounterHelper);
+				$(".icon.menu").hide();
+				openingCounterHelper();
 
 				function openingCounterHelper() {
 
@@ -124,7 +125,8 @@
 				closing = true;
 				var closingCount = 0, closingLimit = 2;
 
-				$(".icon.menu").fadeIn(closingCounterHelper);
+				$(".icon.menu").show();
+				closingCounterHelper();
 				$(".segments.menu").animate({
 					opacity: 0
 				}, closingCounterHelper);
