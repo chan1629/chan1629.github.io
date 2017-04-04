@@ -21,6 +21,13 @@ function openImageViewer(){
 function imageReady(url, i){
 
 	$(".image-container.p" + i)
+		.children()
+		.fadeOut(function(){
+
+			$(this).remove();
+		})
+
+	$(".image-container.p" + i)
 		.append($("<img/>")
 			.addClass("image csshide")
 			.prop("src", url)
@@ -47,6 +54,9 @@ $(document).ready(function(){
 
 			$("<div></div>")
 				.addClass("image-container col-md-4 p" + i)
+				.append($("<div/>")
+					.addClass("waiting")
+				)
 				.appendTo("main > .row");
 		});
 
