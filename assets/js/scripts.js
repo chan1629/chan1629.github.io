@@ -22,21 +22,14 @@ function imageReady(url, i){
 
 	$(".image-container.p" + i)
 		.append($("<img/>")
-			.addClass("image csshide")
+			.addClass("image")
 			.prop("src", url)
 			.click(openImageViewer)
 		)
 
 	$(".image-container.p" + i)
 		.children(".waiting")
-		.fadeOut(function(){
-
-			$(this).remove();
-		})
-
-	$(".image-container.p" + i)
-		.children("img")
-		.fadeIn();
+		.animate({ opacity: "0" }, 6000);
 }
 
 

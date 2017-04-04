@@ -53,13 +53,14 @@ body#birds-main {
 				display: inline-block;
 
 				img.image, div.waiting {
-					width: 100%;
-					height: 100%;
+					position: absolute;
+					width: 20vw;
+					height: 20vw;
 
 				}
 
 				img.image {
-					
+
 					object-fit: cover;
 					cursor: pointer;
 			

@@ -37,8 +37,9 @@ body#birds-main {
         border: 1px solid #ddd;
         display: inline-block; }
         body#birds-main main .row div.image-container img.image, body#birds-main main .row div.image-container div.waiting {
-          width: 100%;
-          height: 100%; }
+          position: absolute;
+          width: 20vw;
+          height: 20vw; }
         body#birds-main main .row div.image-container img.image {
           object-fit: cover;
           cursor: pointer; }
