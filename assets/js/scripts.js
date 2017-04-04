@@ -21,18 +21,20 @@ function openImageViewer(){
 function imageReady(url, i){
 
 	$(".image-container.p" + i)
-		.children()
+		.append($("<img/>")
+			.addClass("image csshide")
+			.prop("src", url)
+			.click(openImageViewer)
+		)
+
+	$(".image-container.p" + i)
+		.children(".waiting")
 		.fadeOut(function(){
 
 			$(this).remove();
 		})
 
 	$(".image-container.p" + i)
-		.append($("<img/>")
-			.addClass("image csshide")
-			.prop("src", url)
-			.click(openImageViewer)
-		)
 		.children("img")
 		.fadeIn();
 }
