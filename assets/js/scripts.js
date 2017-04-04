@@ -14,23 +14,25 @@ var photos=[
 
 function openImageViewer(){
 
-	console.log(this);
 	$(".iframe img").prop("src", $(this).prop("src"));
 	$(".iframe").fadeIn();
 }
 
+function imageReady(){
+	console.log(this);
+	$(this).fadeIn();
+}
+
 
 $(document).ready(function(){
-	console.log("Bird's Portfolio");
-
 
 	_(photos)
 		.forEach(function(url){
 			$("<div></div>")
 				.addClass("image-container col-md-4")
 				.append($("<img/>")
-					.addClass("image")
-					.prop("src", "photos/" + url)
+					.addClass("image csshide")
+					.load("photos/" + url, imageReady)
 					.click(openImageViewer)
 				)
 				.appendTo("main > .row");
