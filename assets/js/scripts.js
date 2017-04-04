@@ -18,20 +18,16 @@ function openImageViewer(){
 	$(".iframe").fadeIn();
 }
 
-function imageReady(url){
+function imageReady(url, i){
 
-
-	$("<div></div>")
-		.addClass("image-container col-md-4")
+	$(".image-container.p" + i)
 		.append($("<img/>")
 			.addClass("image csshide")
 			.prop("src", url)
 			.click(openImageViewer)
 		)
-		.appendTo("main > .row")
 		.children("img")
 		.fadeIn();
-
 }
 
 
@@ -40,15 +36,18 @@ $(document).ready(function(){
 	var downloadingImageAry = [];
 
 	_(photos)
-		.forEach(function(url){
+		.forEach(function(url, i){
 
 			downloadingImageAry.push(new Image());
 			_.last(downloadingImageAry).onload = function(){
-			    imageReady(this.src);   
+			    imageReady(this.src, i);   
 			};
 
 			_.last(downloadingImageAry).src = "photos/" + url;
-			
+
+			$("<div></div>")
+				.addClass("image-container col-md-4 p" + i)
+				.appendTo("main > .row");
 		});
 
 	$(".iframe").click(function(){
