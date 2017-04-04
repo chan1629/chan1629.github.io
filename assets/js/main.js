@@ -74,7 +74,7 @@
 	$(function() {
 		console.log("Bird's Portfolio");
 
-		$(".gallery img").click(function(){
+		$(".image").click(function(){
 
 			$(".iframe img").prop("src", $(this).prop("src"));
 			$(".iframe").fadeIn();

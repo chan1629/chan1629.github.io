@@ -12,28 +12,31 @@ var photos=[
 	"IMG_1500.jpg",
 ]
 
+function openImageViewer(){
+
+	console.log(this);
+	$(".iframe img").prop("src", $(this).prop("src"));
+	$(".iframe").fadeIn();
+}
+
+
 $(document).ready(function(){
 	console.log("Bird's Portfolio");
 
-	$(".gallery img").click(function(){
 
-		$(".iframe img").prop("src", $(this).prop("src"));
-		$(".iframe").fadeIn();
-	});
+	_(photos)
+		.forEach(function(url){
+			$("<div></div>")
+				.addClass("image-container col-md-4")
+				.append($("<img/>")
+					.addClass("image")
+					.prop("src", "photos/" + url)
+					.click(openImageViewer)
+				)
+				.appendTo("main > .row");
+		});
 
 	$(".iframe").click(function(){
 		$(".iframe").fadeOut();
 	});
-
-	_(photos)
-		.forEach(function(url){
-			console.log(url);
-			$("<div></div>")
-				.addClass("image-container col-md-4")
-				.append($("<div></div>")
-					.addClass("image")
-					.css("background-image", "url('photos/" + url + "')")
-				)
-				.appendTo("main > .row");
-		})
 })
