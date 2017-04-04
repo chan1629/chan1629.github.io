@@ -1,0 +1,41 @@
+body#birds-main {
+  font-family: 'Open Sans', sans-serif;
+  color: #888;
+  margin: 0; }
+  body#birds-main header {
+    width: 100vw;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0; }
+    body#birds-main header .header-container {
+      width: 82vw;
+      margin: auto;
+      text-align: left;
+      font-weight: bold; }
+      body#birds-main header .header-container span {
+        font-style: italic;
+        color: #aaa;
+        letter-spacing: 2px;
+        font-size: 17px; }
+      body#birds-main header .header-container ul, body#birds-main header .header-container li {
+        display: inline-block; }
+      body#birds-main header .header-container ul {
+        margin: 3px 0 0;
+        float: right; }
+        body#birds-main header .header-container ul li {
+          margin: 0 1vw;
+          font-size: 13px; }
+  body#birds-main main {
+    width: 84vw;
+    margin: 50px auto; }
+    body#birds-main main .row {
+      margin: 0; }
+      body#birds-main main .row div.image-container {
+        width: 21vw;
+        height: 21vw;
+        padding: 0.5vw;
+        border: 1px solid #ddd;
+        display: inline-block; }
+        body#birds-main main .row div.image-container div.image {
+          width: 100%;
+          height: 100%;
+          background-size: cover; }

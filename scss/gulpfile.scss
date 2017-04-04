@@ -1,0 +1,63 @@
+body#birds-main {
+	font-family: 'Open Sans', sans-serif;
+	color: #888;
+	margin: 0;
+
+	header {
+
+		width: 100vw;
+		border-bottom: 1px solid #ddd;
+		padding: 10px 0;
+
+		.header-container{
+
+			width: 82vw;
+			margin: auto;
+			text-align: left;
+			font-weight: bold;
+			
+			span {
+				font-style: italic;
+				color: #aaa;
+				letter-spacing: 2px;
+				font-size: 17px;
+			}
+
+			ul, li {
+				display: inline-block;
+			}
+
+			ul {
+				margin: 3px 0 0;
+				float: right;
+
+				li {
+					margin: 0 1vw;
+					font-size: 13px;
+				}
+			}
+		}
+	}
+
+	main {
+		width: 84vw;
+		margin: 50px auto;
+		.row {
+			margin: 0;
+			div.image-container {
+				width: 21vw;
+				height: 21vw;
+				padding: 0.5vw;
+				border: 1px solid #ddd;
+				display: inline-block;
+
+				div.image {
+					width: 100%;
+					height: 100%;
+					background-size: cover;
+
+				}
+			}
+		}
+	}
+}
