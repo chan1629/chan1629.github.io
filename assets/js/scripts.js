@@ -18,24 +18,37 @@ function openImageViewer(){
 	$(".iframe").fadeIn();
 }
 
-function imageReady(){
-	console.log(this);
-	$(this).fadeIn();
+function imageReady(url){
+
+
+	$("<div></div>")
+		.addClass("image-container col-md-4")
+		.append($("<img/>")
+			.addClass("image csshide")
+			.prop("src", url)
+			.click(openImageViewer)
+		)
+		.appendTo("main > .row")
+		.children("img")
+		.fadeIn();
+
 }
 
 
 $(document).ready(function(){
+	console.log("Bird's Portfolio");
+	var downloadingImageAry = [];
 
 	_(photos)
 		.forEach(function(url){
-			$("<div></div>")
-				.addClass("image-container col-md-4")
-				.append($("<img/>")
-					.addClass("image csshide")
-					.load("photos/" + url, imageReady)
-					.click(openImageViewer)
-				)
-				.appendTo("main > .row");
+
+			downloadingImageAry.push(new Image());
+			_.last(downloadingImageAry).onload = function(){
+			    imageReady(this.src);   
+			};
+
+			_.last(downloadingImageAry).src = "photos/" + url;
+			
 		});
 
 	$(".iframe").click(function(){
