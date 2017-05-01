@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8">
     <title>Bird.Chan ㊣ Photography</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta name="description" content="Bird's Gallery">
     <meta name="author" content="Anthony Wong WWC">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,600i" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
 
     <link rel="stylesheet" href="assets/css/gulpfile.css" />
     <!--[if lt IE 9]>
@@ -22,21 +23,35 @@
         <div class="header-container">
             <span>Bird's Gallery</span>
             <ul>
-                <li>Main</li>
-                <li>Gallery</li>
-                <li>About me</li>
+                <li class="nav" data-href="index">Main</li>
+                <li class="nav" data-href="gallery">Gallery</li>
+                <!-- <li>About me</li> -->
             </ul>
         </div>
     </header>
-    <main>
-    	<div class="row"></div>
+    <main id="index">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-white"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+    </main>
+
+    <main id="gallery">
+        <div class="row"></div>
     </main>
 
     <!-- Fixed Iframe -->
-	<div class="fixed iframe csshide"><img src=""></div>
+    <div class="fixed iframe csshide"><img src=""></div>
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/g/lodash@4.16.3,lodash@4.17.4"></script>

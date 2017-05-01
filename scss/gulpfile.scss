@@ -35,12 +35,13 @@ body#birds-main {
 				li {
 					margin: 0 1vw;
 					font-size: 13px;
+					cursor: pointer;
 				}
 			}
 		}
 	}
 
-	main {
+	main#gallery {
 		width: 84vw;
 		margin: 50px auto;
 		.row {
@@ -69,11 +70,30 @@ body#birds-main {
 					}
 				}
 
-				div.waiting {
-					background: grey;
-
-				}
+				
 			}
+		}
+	}
+
+	main#index {
+		width: 100vw;
+		height: 95vh;
+
+		.swiper-container {
+	        width: 100%;
+	        height: 100%;
+	    }
+	    .swiper-slide {
+	        background-position: center;
+	        background-size: cover;
+	    }
+	}
+
+	main {
+		display: none;
+
+		&.active {
+			display: block;
 		}
 	}
 
@@ -96,4 +116,8 @@ body#birds-main {
 
 .csshide {
 	display: none;
+}
+
+div.waiting {
+	background: grey;
 }

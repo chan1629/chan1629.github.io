@@ -24,29 +24,41 @@ body#birds-main {
         float: right; }
         body#birds-main header .header-container ul li {
           margin: 0 1vw;
-          font-size: 13px; }
-  body#birds-main main {
+          font-size: 13px;
+          cursor: pointer; }
+  body#birds-main main#gallery {
     width: 84vw;
     margin: 50px auto; }
-    body#birds-main main .row {
+    body#birds-main main#gallery .row {
       margin: 0; }
-      body#birds-main main .row div.image-container {
+      body#birds-main main#gallery .row div.image-container {
         width: 21vw;
         height: 21vw;
         padding: 0.5vw;
         border: 1px solid #ddd;
         display: inline-block; }
-        body#birds-main main .row div.image-container img.image, body#birds-main main .row div.image-container div.waiting {
+        body#birds-main main#gallery .row div.image-container img.image, body#birds-main main#gallery .row div.image-container div.waiting {
           position: absolute;
           width: 20vw;
           height: 20vw; }
-        body#birds-main main .row div.image-container img.image {
+        body#birds-main main#gallery .row div.image-container img.image {
           object-fit: cover;
           cursor: pointer; }
-          body#birds-main main .row div.image-container img.image:hover {
+          body#birds-main main#gallery .row div.image-container img.image:hover {
             opacity: 0.5; }
-        body#birds-main main .row div.image-container div.waiting {
-          background: grey; }
+  body#birds-main main#index {
+    width: 100vw;
+    height: 95vh; }
+    body#birds-main main#index .swiper-container {
+      width: 100%;
+      height: 100%; }
+    body#birds-main main#index .swiper-slide {
+      background-position: center;
+      background-size: cover; }
+  body#birds-main main {
+    display: none; }
+    body#birds-main main.active {
+      display: block; }
   body#birds-main .fixed.iframe {
     width: 100vw;
     height: 100vh;
@@ -62,3 +74,6 @@ body#birds-main {
 
 .csshide {
   display: none; }
+
+div.waiting {
+  background: grey; }
